@@ -102,7 +102,7 @@ class Serializer implements FosRestSerializerInterface
         if (!empty($groups)) {
             $jmsContext->setGroups($context->getGroups());
         }
-        if (null !== $context->getMaxDepth()) {
+        if (null !== $context->isMaxDepthEnabled()) {
             $jmsContext->enableMaxDepthChecks();
         }
         if (null !== $context->getSerializeNull()) {
